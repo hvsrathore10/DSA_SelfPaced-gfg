@@ -1,0 +1,11 @@
+Introduction :
+
+1.Analysis of Algorithms
+2.Asymptotic Analysis
+    *Best case
+    *Average case
+    *Worst case
+3.Time complexity and Space complexity(Auxiliary space)/Memory footprint
+4.Analysis common loop
+5.Analysis recursion 
+
