@@ -17,9 +17,63 @@ Node *insertAtBegin(Node *head,int data);
 Node *insertAtEnd(Node *head,int data);
 void printList(Node *head);
 
+//Recursive Solution 
+//Time complexity : O(n) & Auxiliary Space : O(n/k)
+Node *reverseInGroup(Node *head,int k){
+    if(head==NULL)
+        return NULL;
+
+    Node *curr = head;
+    int count = 0;
+    Node *prev=NULL,*next=NULL;
+    while(curr!=NULL && count<k){
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+        count++;
+    }
+    head->next = reverseInGroup(next,k);
+    return prev;
+}
+//Iterative Solution 
+//Time complexity : O(n) & Auxiliary Space : O(1)
+Node *reverseKth(Node *head,int k){
+    if(head==NULL || head->next==NULL)
+        return head;
+    
+    Node *curr = head,*prevFirst = head;
+    bool isFirstPass = true;
+    while(curr != NULL){
+        Node *first = curr,*prev = NULL;
+        int count = 0;
+        while(curr!=NULL && count<k){
+            Node *next = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = next;
+            count++;
+        }
+        if(isFirstPass){
+            head = prev;
+            isFirstPass = false;
+        }
+        else{
+            prevFirst->next = prev;
+        }
+        prevFirst = first;
+    }
+    return head;
+}
 
 int main(){
-    
+    Node *head = NULL;
+    head = createList(head);
+
+    printList(head);
+    // head = reverseInGroup(head,3);
+    head = reverseKth(head,3);
+    printList(head);
     return 0;
 }
 
