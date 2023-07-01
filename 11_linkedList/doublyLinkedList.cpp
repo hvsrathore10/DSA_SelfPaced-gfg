@@ -141,6 +141,7 @@ Node *createList(Node *head){
     }
     return head;
 }
+
 //Time complexity : ϴ(n)
 int countNode(Node *head){
     int count = 0;
@@ -151,6 +152,7 @@ int countNode(Node *head){
     }
     return count;
 }
+
 //Time complexity : O(n)
 void printList(Node *head){
     Node *curr = head;
@@ -159,6 +161,7 @@ void printList(Node *head){
         curr = curr->next;
     }cout<<endl;
 }
+
 //Time complexity : O(n)
 int search(Node *head,int key){
     if(head == NULL){
@@ -175,6 +178,7 @@ int search(Node *head,int key){
     cout<<key<<" is not present is List\n";
     return -1;
 }
+
 //Time complexity : O(1)
 Node *insertAtBegin(Node *head,int data){
     Node *temp = new Node(data);
@@ -249,6 +253,7 @@ Node *insertAtPos(Node *head,int data,int pos){
     temp->next->prev = temp;
     return head;
 }
+
 //Time complexity :O(1)
 Node *delHead(Node *head){
     if(head == NULL) return NULL;
@@ -281,6 +286,7 @@ Node *delTail(Node *head){
     delete(curr);
     return head;
 }
+
 //Time compleaxity : O(n)
 Node *reverseList(Node *head){
     Node *prev,*curr;
