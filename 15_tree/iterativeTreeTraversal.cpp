@@ -29,7 +29,7 @@ void inorder(Node *root){
         curr = curr->right;
     }
 }
-//Time complexity :O(n) and Auxiliary space :O(n)
+//Time complexity :O(n) and Auxiliary space :O(h)
 void preorder(Node *root){
     if(root == NULL)
         return;
@@ -70,6 +70,32 @@ void preorder_better(Node *root){
         
     }
 }
+
+void postorder(Node *root){
+    if(root==NULL)
+        return;
+    stack<Node *> st;
+    Node *curr = root;
+    while(curr!=NULL || st.empty()==false){
+        while(curr!=NULL){
+            if(curr->right!=NULL)
+                st.push(curr->right);
+            st.push(curr);
+            curr = curr->left;
+        }
+        curr = st.top();
+        st.pop();
+        if(curr->right!=NULL && !st.empty() && curr->right==st.top()){
+            st.pop();
+            st.push(curr);
+            curr = curr->right;
+        }
+        else{
+            cout<<curr->data<<" ";
+            curr = NULL;
+        }
+    }
+}
 int main(){
     Node *root = new Node(30);
 
@@ -94,7 +120,9 @@ int main(){
     inorder(root);
     cout<<"\nPreorder Traversal : ";
     preorder(root);
-    cout<<"\nPreorder Traversal : ";
-    preorder_better(root);
+    // cout<<"\nPreorder Traversal : ";
+    // preorder_better(root);
+    cout<<"\nPostorder Traversal : ";
+    postorder(root);
     return 0;
 }

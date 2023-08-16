@@ -60,18 +60,18 @@ Node *_LCA(Node *root,int n1,int n2){
     if(root->data==n1 || root->data==n2)
         return root;
 
-    Node *lca1 = _LCA(root->left,n1,n2);
-    Node *lca2 = _LCA(root->right,n1,n2);
+    Node *left_lca = _LCA(root->left,n1,n2);
+    Node *right_lca = _LCA(root->right,n1,n2);
     // case 2 : if one of its subtree contain n1 and another conatain n2
-    if(lca1!=NULL && lca2!=NULL)
+    if(left_lca!=NULL && right_lca!=NULL)
         return root;
     
     //case 3 : if one of its subtree contain both n1 & n2
-    if(lca1!=NULL)
-        return lca1;
+    if(left_lca!=NULL)
+        return left_lca;
     //case 4 : if non of its subtree contain any of n1 or n2
     else 
-        return lca2;
+        return right_lca;
 }
 int main(){
     Node *root = new Node(10);
