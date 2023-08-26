@@ -27,7 +27,7 @@ Node *delHead(Node *head);
 Node *delTail(Node *head);
 Node *reverseList(Node *head);
 Node *reverseListRecursive(Node *head);
-Node *reverseListRecursive2(Node *head);
+Node *reverseListRecursive2(Node *head,Node *prev);
 void sort(Node *head);
 
 int main(){
