@@ -1,0 +1,24 @@
+A disjoint-set data structure is a data structure that keeps track of a set of 
+elements partitioned into a number of disjoint (non-overlapping) subsets.
+For Example:
+Consider that there are 5 students in a classroom namely, A, B, C, D, and E.
+They will be denoted as 5 different subsets: {A}, {B}, {C}, {D}, {E}.
+
+-After some point of time, A became friends with B, and C became friend with D. 
+So, A and B will now belong to a same set and C and D will now belong to another 
+same set.
+
+-The disjoint data structure will now be: {A, B}, {C, D}, {E}.
+
+
+-As explained above, there are generally two types of operations performed on a 
+Disjoint-Set data structure:
+=>Union(A, B): This operation tells to merge the sets containing elements A and B 
+respectively by performing a Union operation on the sets.
+=>Find(A): This operation tells to find the subset to which the element A belongs.
+
+
+
+-Application: 
+1.detecting a cycle in a Graph
+2.Minimum spanning tree (Kruskal's Algorithm)

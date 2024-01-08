@@ -1,0 +1,37 @@
+Date Started :: 18/09/2023
+#Topic's ::
+1.Types of graph
+    |->Undirected
+    |->Directed
+
+2.Representation of graph 
+    |->Adjacency Matrix ==>Auxiliary space :O(V²)
+    |->Adjacency List ==>Auxiliary space :O(V+E)
+
+3.Breadth First Search{BFS}  ==> O(V+E)
+4.Depth First Search{DFS}  ==> O(V+E)
+
+5.Shortest Path(Single source Shortest Path)
+    |->For Undirected & unweighted graph ->Using BFS ==> O(V+E)
+    |->For Weighted graph 
+            |-->Dijkstra's Algorithm (no negative Weighted edge) ==>O(E.logV)
+            |-->Bellman-Ford Algorithm ==>O(V﹡E)
+    |->Directed Acyclic Graph 
+            |->Using Topological Sort ==>O(V+E)
+
+6.Cycle Detection ==>O(V+E)
+    |->Using Depth First Search 
+    |->Using Kahn's Algorithm
+
+7.Topological Sort  ==>O(V+E)
+
+8.Minimum Spanning Tree
+    |->Prim's Algorithm ==>O(V²)
+    |->Kruskal's Algorithm ==>O(E.logE)
+
+9.Strongly Connected Components
+    |->Kosaeaju's Algorithm ==>O(V+E) [Two DFS traversal requires]
+    |->Tarjan's Algorithm ==>O(V+E) [only Single DFS traversal requires]
+
+10.Cut vertices or Articulation Point ==>O(V+E)
+11.Cut edge or Bridges in Graph ==>O(V+E)
