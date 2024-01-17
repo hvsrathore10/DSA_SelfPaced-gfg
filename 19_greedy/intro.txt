@@ -1,0 +1,13 @@
+Date - 14/01/2024
+1.Introduction of Greedy Algorithm ::
+    Greedy is an algorithmic paradigm that builds up a solution 
+    piece by piece, always choosing the next piece that offers 
+    the most obvious and immediate benefit. So the problems 
+    where choosing locally optimal also leads to the global 
+    optimal solution are best fit for Greedy.
+
+2.Coin Exchange Problem -----------|
+3.Activity Selection Problem       |
+4.Fractional Knapsack Problem      |-->Time complexity:: O(n.㏒n)
+5.Job Sequencing Problem           |
+6.Huffman Coding ------------------|
