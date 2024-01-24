@@ -1,0 +1,8 @@
+#Date :: 21/01/2024
+Backtracking ::
+1.Rat in a Maze Problem --> O(2^(N²))
+2.N-Queen Problem --> O(N!)
+3.SudoKu Problem --> (9*(N²))
+
+
+g++ -std=c++11 fileName.cpp
