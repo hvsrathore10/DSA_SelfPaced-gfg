@@ -1,5 +1,7 @@
-//Problem : We have give an array which is k-sorted array.Target is to sort the array
-// K-sorted array means it is nearly sorted i.e., An element at index i will be present in b/w i-k to i+k in sorted array.
+//Problem:We have give an array which is k-sorted array.Target is to sort the array
+
+// K-sorted array means it is nearly sorted i.e., An element at index i will be 
+// present in b/w i-k to i+k in sorted array.
 #include<iostream>
 #include<queue>
 using namespace std;

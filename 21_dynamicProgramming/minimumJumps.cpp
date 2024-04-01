@@ -6,7 +6,7 @@ If the end isn’t reachable, return -1.
 */
 #include<iostream>
 using namespace std;
-
+//Recursion Solution ::Time complexity :O(2^n) and Auxiliary space :O(1)
 int minJumps(int arr[],int n){
     if(n==1)
         return 0;
@@ -21,6 +21,7 @@ int minJumps(int arr[],int n){
     }
     return res;
 }
+//Dynmaic Programming Solution ::Time complexity :O(n) and Auxiliary space :O(n)
 int minJumps_T(int arr[],int n){
     int dp[n];
     for(int i=0;i<n;i++)
@@ -36,6 +37,26 @@ int minJumps_T(int arr[],int n){
         }
     }
     return dp[n-1];
+}
+//Time complexity :O(n) and Auxiliary space :O(1)
+int minimumJumps(int arr[], int n){
+    if(n<=1)
+        return 0;
+            
+    if(arr[0] == 0)
+        return -1;
+        
+    int currLongestDist = 0;
+    int curr = 0;
+    int jumps = 0;
+    for(int i=0;i<n-1;i++){
+        currLongestDist = max(currLongestDist,arr[i]+i);
+        if(curr == i){
+            curr = currLongestDist;
+            jumps++;
+        }
+    }
+    return (curr<n-1)? -1 : jumps;
 }
 int main(){
     int arr[] = {3,4,2,1,2,1};

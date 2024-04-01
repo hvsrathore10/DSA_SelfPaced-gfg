@@ -1,6 +1,8 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
+//Recursion Solution:: Time complexity:O(2^n)
 int lcs_R(string& s1,string& s2,int m,int n){
     //base case ::when length of atleast one string is zero
     if(m==0 || n==0)
@@ -14,7 +16,7 @@ int lcs_R(string& s1,string& s2,int m,int n){
         return max(lcs_R(s1,s2,m-1,n),lcs_R(s1,s2,m,n-1));
 }
 //DP Solution ::
-// Memoization Based 
+// Memoization Based -->Time complexity :O(m*n)
 int utilityLCS(string& s1,string& s2,int m,int n,vector< vector<int> >& dp){
     //base case :when we already calculated the value for m & n
     if(dp[m][n] != -1)
@@ -38,6 +40,7 @@ int lcs_M(string& s1,string& s2,int m,int n){
 
     return utilityLCS(s1,s2,m,n,dp);
 }
+//Tabulation Approach :-Time complexity :O(m*n) and Space :O(m*n)
 int lcs_T(string& s1,string& s2,int m,int n){
     vector< vector<int> > dp(m+1,vector<int>(n+1,-1));
 

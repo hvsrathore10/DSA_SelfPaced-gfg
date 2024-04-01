@@ -23,11 +23,11 @@ int maxCuts(int L,int a,int b,int c){
 //Dynamic Programming Solution :
 int maxCuts_T(int L,int a,int b,int c){
     int dp[L+1];
-    for(int i=0;i<=L;i++)
-        dp[i] = -1;
+    //base case ::
     dp[0] = 0;
 
     for(int i=1;i<=L;i++){
+        dp[i] = -1;
         if(i-a >= 0) dp[i] = max(dp[i],dp[i-a]);
         if(i-b >= 0) dp[i] = max(dp[i],dp[i-b]);
         if(i-c >= 0) dp[i] = max(dp[i],dp[i-c]);
@@ -35,7 +35,7 @@ int maxCuts_T(int L,int a,int b,int c){
         if(dp[i] != -1)
             dp[i]++;
     }
-    return dp[L];
+    return (dp[L]==-1)? 0:dp[L];
 }
 int main(){
     int L = 5;

@@ -56,5 +56,5 @@ int main(){
     return 0;
 }
 
-// Heap sort algorithm has limited use because Quicksort and Mergesort are better in practice. 
-// Nevertheless, the Heap data structure itself is enormously used.
+// Heap sort algorithm has limited use because Quicksort and Mergesort are better
+// in practice.Nevertheless, the Heap data structure itself is enormously used.

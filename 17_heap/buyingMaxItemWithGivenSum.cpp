@@ -1,5 +1,7 @@
-//Problem: You are given a array of size n and a SUM,your task is to count maximum number of element that
-//can be taken such that there sum will be less than or equal to given SUM.-->With out modify the array
+/*Problem: You are given a array of size n and a SUM,your task is to count maximum
+number of element that can be taken such that there sum will be less than or equal
+to given SUM.-->With out modify the array
+*/
 #include<iostream>
 #include<queue>
 using namespace std;

@@ -1,4 +1,5 @@
-//Problem : Given a sorted array arr[] and a value X, find the k closest elements to X in arr[]. 
+// Problem : Given a sorted array arr[] and a value X, find the k closest elements
+// to X in arr[]. 
 #include<iostream>
 #include<queue>
 using namespace std;

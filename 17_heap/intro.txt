@@ -2,7 +2,17 @@ Date - 2/September/2023
 
 //Properties of Binary Heap : 
 1.Heap is a complete binary tree
-2.Heap follow parental Properties ie, leftchild = 2i+1, rightchild = 2i+2, and parent = floor(i-1/2)
+2.Heap follow parental Properties ie, 
+    leftchild = 2i+1,rightchild = 2i+2, and parent = floor(i-1/2)
 3.Types of Heap :- Min Heap and Max Heap
 4.Height of Heap : O(㏒N)
 5.Maximum possible nodes at any level with Height(h) = N/2^h+1
+
+//Problems :
+1.Buyinf Maximum Item with given Sum
+2.Heap Sort
+3.K Sorted Array
+4.K Largest Number
+5.K Closest Number
+6.Merge K sorted Arrays
+7.Median Of Streaming Date

@@ -5,6 +5,7 @@ of the subsequence are sorted in increasing order.
 For example, the length of LIS for {3,4,2,8,10} is 4 and LIS is {3,4,8,10}.
 */
 #include<iostream>
+#include<vector>
 using namespace std;
 
 //Recursion Based Solution ::

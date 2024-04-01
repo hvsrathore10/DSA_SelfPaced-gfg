@@ -17,7 +17,7 @@ void printKLargest1(int arr[],int n,int k){
 void printKLargest2(int arr[],int n,int k){
     priority_queue< int,vector<int>,greater<int> > pq(arr,arr+k);  //<-- O(K)
     
-    for(int i=k;i<n;i++){ //<-- O(N-K.logK)
+    for(int i=k;i<n;i++){ //<-- O((N-K).logK)
         if(arr[i]>pq.top()){
             pq.pop();
             pq.push(arr[i]);
